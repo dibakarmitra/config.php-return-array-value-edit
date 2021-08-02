@@ -3,6 +3,7 @@ config.php-return-array-value-edit
 
 
 index.php
+--
 <?php
 
 function updateConstants($primary_key, $secondary_key, $value) {
@@ -21,9 +22,9 @@ function updateConstants($primary_key, $secondary_key, $value) {
     return $constants; //if you want to get the new config
 }
 updateConstants('guards', 'expert' ,'other');
-
+--
 constants.php
-
+--
 <?php return [
   'guards' => [
     'admin' => 'admin',
@@ -117,3 +118,5 @@ constants.php
     'large' => 'zero result found.',
   ],
 ];
+
+--
